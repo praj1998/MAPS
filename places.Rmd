@@ -1,0 +1,52 @@
+---
+title: "Maps about where I grew up"
+author: "Prajwal Dutta"
+date: "10/21/2020"
+output: html_document
+---
+
+##  Objective
+
+
+To host a webpage.
+
+Should contain a document and a map created with Leaflet.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Required Packages
+
+```{r echo=TRUE}
+library(leaflet)
+```
+
+## Places where I grew up
+
+Includes data of all the places where I grew up
+
+```{r}
+my_map <- leaflet() %>%
+addTiles() %>%
+addMarkers(lat=22.8015194, lng=86.2029579,
+popup="I have lived in Jamshedpur,Jharkhand from 2007-present ")
+my_map
+my_map <- leaflet() %>%
+addTiles() %>%
+addMarkers(lat=20.9435669, lng=86.133103,
+popup="I lived in Jajpur road,Orissa from 2003-2007")
+my_map
+my_map <- leaflet() %>%
+addTiles() %>%
+addMarkers(lat=20.2602939, lng=85.8394548,
+popup="I lived in Bhubhaneshwar,Orissa from 1998-2003")
+my_map
+```
+
+## Project Review
+
+Packages Used: Knitr, Leaflet.
+
+
+Locations Provided: Jamshedpur, Bhubaneshwar, Jajpur.
